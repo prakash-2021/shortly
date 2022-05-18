@@ -5,10 +5,15 @@ let shortenLink = document.getElementById('shorten-link');
 let copyLink = document.getElementById('copy-link');
 let copyBtn = document.getElementById('copy-btn');
 let linkList = document.getElementById('link-list');
+let statTxt = document.getElementById('statTxt')
+let addText = document.getElementById('add-link');
 
 let output;
 shortenBtn.addEventListener('click', function(){
     if(pastedLink.value == ''){
+        pastedLink.style.outline = "2px solid red";
+        pastedLink.classList.add('active-error');
+        addText.style.display = "block";
 
     }
     else{
@@ -24,8 +29,10 @@ shortenBtn.addEventListener('click', function(){
         </div>
         </div>
         `
-        // shortenLink.style.marginTop = "1em";
         linkList.innerHTML =  output;
         pastedLink.value = null;
+        pastedLink.style.outline = "none";
+        pastedLink.classList.remove('active-error');
+        addText.style.display = "none";
     }
 })
