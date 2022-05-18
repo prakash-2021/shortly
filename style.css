@@ -115,6 +115,11 @@ header nav .login ul .signup-btn:hover {
   background-color: hsl(180, 84%, 66%);
 }
 
+.banner .banner-img img{
+  max-width: 100%;
+  height: auto;
+}
+
 .stat-banner {
   margin: 0em 0 0;
   padding: 0em 8em 5em;
@@ -204,8 +209,6 @@ header nav .login ul .signup-btn:hover {
 
 .stat-banner  .copy-menu .copy-btn{
   border: none;
-  background: none;
-  color: var(--Grayish-Violet);
   cursor: pointer;
   padding: 9px 28px;
   transition: 0.5s;
@@ -377,3 +380,15 @@ footer .social-icons li{
   list-style: none;
   margin: 0 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+

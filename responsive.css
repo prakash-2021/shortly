@@ -1,0 +1,63 @@
+@media only screen and (max-width: 1300px) {
+
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner .banner-txt h1 {
+        font-size: 3rem;
+    }
+
+    .banner .banner-txt h3{
+        font-size: 1rem;
+    }
+
+    .stat-banner{
+        padding: 0 4em 4em;
+    }
+
+    .search-banner{
+        width: 80%;
+        transform: translate(10%, -50%);
+        position: relative;
+    }
+
+    .search-banner input{
+        max-width: 30em;
+    }
+    .stat-banner .brand-box{
+        margin-top: 7em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .stat-banner .second{
+        margin-top: 3em;
+    }
+    
+    .stat-banner .third{
+        margin-top: 3em;
+    }
+
+    .stat-banner .brand-box .blue-line{
+        height: 700px;
+        width: 10px;
+        top: 200%;
+        left: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    html{
+        font-size: 14px;
+    }
+
+    .stat-banner .brand-box .blue-line{
+        height: 500px;
+        width: 10px;
+        top: 190%;
+        left: 20%;
+    }
+}

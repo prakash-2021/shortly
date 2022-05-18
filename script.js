@@ -8,7 +8,7 @@ let linkList = document.getElementById('link-list');
 let statTxt = document.getElementById('statTxt')
 let addText = document.getElementById('add-link');
 
-let output;
+let output = "";
 shortenBtn.addEventListener('click', function(){
     if(pastedLink.value == ''){
         pastedLink.style.outline = "2px solid red";
@@ -25,7 +25,7 @@ shortenBtn.addEventListener('click', function(){
         
         <div class="copy-menu">
         <p class="copy-link" id="copy-link">https/fb.com</p>
-        <button class="copy-btn" id="copy-btn">Copy</button>
+        <button class="copy-btn" id="copy-btn" onclick = "funcopy(this)">Copy</button>
         </div>
         </div>
         `
@@ -36,3 +36,7 @@ shortenBtn.addEventListener('click', function(){
         addText.style.display = "none";
     }
 })
+function funcopy(btn){
+    btn.style.background = "hsl(257, 27%, 26%)"
+    btn.innerHTML = "Copied!"
+}
