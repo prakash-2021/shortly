@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  /* overflow-x: hidden; */
 }
 
 :root {
@@ -16,6 +15,9 @@
   --Grayish-Violet: hsl(257, 7%, 63%);
   --Very-Dark-Blue: hsl(255, 11%, 22%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
+}
+
+body{
 }
 
 .wrapper{
@@ -90,8 +92,8 @@ header .fa-bars{
   display: none;
 }
 .banner {
-  margin-bottom: 10em;
-  overflow-x: hidden;
+  padding: 0 0 10em 0;
+  overflow: hidden;
 }
 
 .flex-banner{
@@ -100,29 +102,31 @@ header .fa-bars{
 }
 
 .banner .banner-txt {
-  margin-top: 4em;
+  padding: 4em 0;
+  flex: 1;
 }
 
 .banner .banner-txt h1 {
   font-size: 3.8rem;
   font-weight: 700;
   color: var(--Very-Dark-Blue);
+  line-height: 1.2;
 }
 
-.banner .banner-txt h3 {
+.banner .banner-txt p {
   color: var(--Grayish-Violet);
   font-size: 1.2rem;
   font-weight: 500;
+  line-height: 1.8;
 }
 
 .banner .banner-txt button {
   border: none;
-  background: none;
   color: var(--Grayish-Violet);
   cursor: pointer;
-  padding: 7px 28px;
+  padding: 12px 28px;
   transition: 0.5s;
-  border-radius: 20px;
+  border-radius: 100px;
   background: var(--Cyan);
   color: white;
   margin-top: 2em;
@@ -134,10 +138,14 @@ header .fa-bars{
   background-color: hsl(180, 84%, 66%);
 }
 
+.banner .banner-img{
+  position: relative;
+  flex: 1;
+}
 .banner .banner-img img{
-  /* position: absolute; */
-  /* left: 60%; */
-  /* transform: translate(30%, 0); */
+  width: 110%;
+  margin-left: 7em;
+  position: absolute;
   z-index: -10;
 }
 
@@ -272,7 +280,7 @@ header .fa-bars{
 
 .stat-banner .brand-box .blue-line{
   height: 10px;
-  width: 50em;
+  width: 45em;
   position: absolute;
   background-color: var(--Cyan);
   margin: 8em 20em;

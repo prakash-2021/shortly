@@ -84,7 +84,6 @@
         background-color: hsl(257, 27%, 26%);
         border-radius: 20px;
         padding: 1em 0;
-        /* display: none; */
         position: absolute;
         width: 80%;
         top: 20%;
@@ -139,7 +138,7 @@
     }
 
     .banner{
-        padding: 0%;
+        padding: 0 0 5em 0;
     }
 
     .search-banner{
@@ -151,6 +150,8 @@
     .search-banner input {
         max-width: 40em;
     }
+
+
 
     .search-banner button{
         margin:1em 0 0 0;
@@ -183,6 +184,17 @@
     footer .col ul li a{
         font-size: 1rem;
     }
+
+    .banner .banner-img{
+        /* position: relative; */
+        flex: 1;
+      }
+      .banner .banner-img img{
+        max-width: 100%;
+        margin-left: 7em;
+        position:static;
+        z-index: -10;
+      }
 }
 @media only screen and (max-width: 768px){
     .stat-banner .brand-box .blue-line{
