@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* overflow-x: hidden; */
 }
 
 :root {
@@ -15,6 +16,11 @@
   --Grayish-Violet: hsl(257, 7%, 63%);
   --Very-Dark-Blue: hsl(255, 11%, 22%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header {
@@ -73,11 +79,24 @@ header nav .login ul .signup-btn:hover {
   background-color: hsl(180, 84%, 66%);
 }
 
+header .fa-bars{
+  font-size: 40px;
+  color: var(--Grayish-Violet);
+  display: none;
+  cursor: pointer;
+}
+
+.logo-img{
+  display: none;
+}
 .banner {
+  margin-bottom: 10em;
+  overflow-x: hidden;
+}
+
+.flex-banner{
   display: flex;
   justify-content: space-between;
-  padding-left: 5em;
-  margin-bottom: 10em;
 }
 
 .banner .banner-txt {
@@ -85,7 +104,7 @@ header nav .login ul .signup-btn:hover {
 }
 
 .banner .banner-txt h1 {
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 700;
   color: var(--Very-Dark-Blue);
 }
@@ -116,23 +135,24 @@ header nav .login ul .signup-btn:hover {
 }
 
 .banner .banner-img img{
-  max-width: 100%;
-  height: auto;
+  /* position: absolute; */
+  /* left: 60%; */
+  /* transform: translate(30%, 0); */
+  z-index: -10;
 }
 
 .stat-banner {
-  margin: 0em 0 0;
   padding: 0em 8em 5em;
   background-color: hsl(0, 0%, 92%);
 }
 
 .search-banner {
-  width: 80%;
+  /* width: 100%; */
   height: 10em;
   background-color: var(--Dark-Violet);
   background-image: url(./images/bg-shorten-desktop.svg);
   border-radius: 10px;
-  transform: translate(10%, -50%);
+  transform: translate(0%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +161,7 @@ header nav .login ul .signup-btn:hover {
 
 .search-banner input {
   height: 3.5em;
-  width: 50em;
+  width: 60em;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -227,7 +247,7 @@ header nav .login ul .signup-btn:hover {
   background-color: hsl(180, 84%, 66%);
 }
 
-.stat-banner .stat-txt {
+.stat-banner {
   text-align: center;
   margin-top: 2em;
 }
@@ -252,7 +272,7 @@ header nav .login ul .signup-btn:hover {
 
 .stat-banner .brand-box .blue-line{
   height: 10px;
-  width: 50%;
+  width: 50em;
   position: absolute;
   background-color: var(--Cyan);
   margin: 8em 20em;
@@ -336,17 +356,18 @@ header nav .login ul .signup-btn:hover {
 
 footer{
   background: rgb(24, 23, 23);
+}
+.footer{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: white;
   padding: 5em 0;
 }
-
 footer .logo svg path{
   fill: white;
 }
 
-footer .col h5{
+.blue-line{
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0 30x 0;

@@ -22,6 +22,8 @@ shortenBtn.addEventListener('click', function(){
         <div class="typed-link">
         <p id="typed-link">${pastedLink.value}</p>
         </div>
+
+        <div class = "split-line"></div>
         
         <div class="copy-menu">
         <p class="copy-link" id="copy-link">https/fb.com</p>
@@ -40,3 +42,20 @@ function funcopy(btn){
     btn.style.background = "hsl(257, 27%, 26%)"
     btn.innerHTML = "Copied!"
 }
+
+
+
+// Ham menu
+
+let nav = document.getElementById('nav');
+let hamBurger = document.getElementById('hamBurger');
+
+hamBurger.addEventListener('click', function(){
+    if(nav.style.transform === "translate(0px, -10%)"){
+        nav.style.transform = "translate(0, -300%)"
+    }
+    else{
+        nav.style.transform = "translate(0, -10%)"
+    }
+})
+
