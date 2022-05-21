@@ -9,15 +9,14 @@ let statTxt = document.getElementById('statTxt')
 let addText = document.getElementById('add-link');
 
 let output = "";
-shortenBtn.addEventListener('click', function(){
-    if(pastedLink.value == ''){
-        pastedLink.style.outline = "2px solid red";
-        pastedLink.classList.add('active-error');
-        addText.style.display = "block";
+shortenBtn.addEventListener('click', function () {
+   if (pastedLink.value == '') {
+      pastedLink.style.outline = "2px solid red";
+      pastedLink.classList.add('active-error');
+      addText.style.display = "block";
 
-    }
-    else{
-        output += `
+   } else {
+      output += `
         <div class="shorten-link" id="shorten-link">
         <div class="typed-link">
         <p id="typed-link">${pastedLink.value}</p>
@@ -31,18 +30,18 @@ shortenBtn.addEventListener('click', function(){
         </div>
         </div>
         `
-        linkList.innerHTML =  output;
-        pastedLink.value = null;
-        pastedLink.style.outline = "none";
-        pastedLink.classList.remove('active-error');
-        addText.style.display = "none";
-    }
+      linkList.innerHTML = output;
+      pastedLink.value = null;
+      pastedLink.style.outline = "none";
+      pastedLink.classList.remove('active-error');
+      addText.style.display = "none";
+   }
 })
-function funcopy(btn){
-    btn.style.background = "hsl(257, 27%, 26%)"
-    btn.innerHTML = "Copied!"
-}
 
+function funcopy(btn) {
+   btn.style.background = "hsl(257, 27%, 26%)"
+   btn.innerHTML = "Copied!"
+}
 
 
 // Ham menu
@@ -50,12 +49,10 @@ function funcopy(btn){
 let nav = document.getElementById('nav');
 let hamBurger = document.getElementById('hamBurger');
 
-hamBurger.addEventListener('click', function(){
-    if(nav.style.transform === "translate(0px, -10%)"){
-        nav.style.transform = "translate(0, -300%)"
-    }
-    else{
-        nav.style.transform = "translate(0, -10%)"
-    }
+hamBurger.addEventListener('click', function () {
+   if (nav.style.transform === "translate(0px, -10%)") {
+      nav.style.transform = "translate(0, -300%)"
+   } else {
+      nav.style.transform = "translate(0, -10%)"
+   }
 })
-
